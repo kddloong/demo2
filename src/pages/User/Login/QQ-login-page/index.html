@@ -1,0 +1,126 @@
+<!--
+
+  这个作为QQ登录的中转页面，独立于象体云，
+  部署在同一个服务器的changguan-auth-web文件夹下
+  放在这个文件夹下是为了git同步代码
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
+<script>
+
+  function back(back_url) {
+    opener.document.location.href = back_url
+      ? back_url
+      : "http://h8.yunchaoyun.com/welcome";
+    window.close();
+  }
+
+  function save(params) {
+    window.localStorage.setItem("accessToken", params.access_token);
+    window.localStorage.setItem("refreshToken", params.refresh_token);
+    window.localStorage.setItem("idToken", params.id_token);
+    window.localStorage.setItem("expire_in", String(params.expire_in));
+    const expire_time = new Date(dayjs().add(params.expire_in, 'seconds').toDate()).getTime().toString()
+    window.localStorage.setItem("expire_time", expire_time)
+  }
+
+  let URL = window.location.href;
+
+  function getUrlParams2(url) {
+    let urlStr = url.split("?")[1];
+    const urlSearchParams = new URLSearchParams(urlStr);
+    const result = Object.fromEntries(urlSearchParams.entries());
+    return result;
+  }
+
+  const localStorageAccessToken =
+    window.localStorage.getItem("accessToken");
+
+  const userId = window.localStorage.getItem("currentUserId");
+
+  const paramsObj = getUrlParams2(URL);
+
+  const code = paramsObj.code;
+
+  const back_url = paramsObj.back_url || "";
+
+
+  const bodyData = {
+    appId: "101738311",
+    id: userId,
+    code: code,
+  };
+
+  const params = new URLSearchParams();
+  for (const key in bodyData) {
+    params.append(key, bodyData[key]);
+  }
+  const handleRequset = () => {
+    if (localStorageAccessToken && userId) {
+      // 绑定
+      fetch(
+        "http://223.108.233.254:9001/user-service/v1/sys/user/qq/binding",
+        {
+          method: "POST",
+          headers: {
+            Client_id: "1658654933521862658",
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization: "Bearer " + localStorageAccessToken,
+          },
+          body: params, // 不转json格式
+        }
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          if (data.success) {
+            opener.document.location.href = 'http://h8.yunchaoyun.com/account/settings?applicationId&app_tabs_info=binding' // 回到绑定页面
+            window.close();
+          } else {
+          //  如果该QQ账号已经被绑定
+            opener.document.location.href = 'http://h8.yunchaoyun.com/account/settings?applicationId&app_tabs_info=binding&tips=1' // 回到绑定页面并提示
+            window.close();
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    } else {
+      // 登录
+      fetch(
+        "http://223.108.233.254:9001/auth-service/qq/open/login?client_id=1658654933521862658&client_secret=6c2092db139752a3&appId=101738311&code=" +
+        code,
+        {
+          headers: {
+            Client_id: "1658654933521862658",
+          },
+        }
+      )
+        .then((josn) => josn.json())
+        .then((res) => {
+          console.log(res);
+
+          if (res.success) {
+            save(res.data)
+            opener.document.location.href = 'http://h8.yunchaoyun.com/welcome' // 进入系统
+            window.close();
+          }
+        });
+    }
+  };
+
+  handleRequset();
+</script>
+</body>
+</html>

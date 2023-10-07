@@ -1,0 +1,14 @@
+.vertical > .ant-divider-vertical {
+  height: initial;
+}
+
+.left-content:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.left-description {
+  width:440px;
+  font-size: 14px;
+  color: grey;
+  margin-top: 8px;
+}

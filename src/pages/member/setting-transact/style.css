@@ -1,0 +1,28 @@
+/*.card-box {*/
+/*  gap: 20px;*/
+/*  display: flex;*/
+/*  flex-flow: wrap;*/
+/*  width: 100%;*/
+/*  padding-top: 10px;*/
+/*  margin-top: 10px;*/
+/*}*/
+/*.grid-box{*/
+/*  gap: 26px;*/
+/*  display: flex;*/
+/*  flex-flow: wrap;*/
+/*  width: 100%;*/
+/*  padding-top: 10px;*/
+/*  margin-top: -10px;*/
+/*}*/
+
+/*.card-info-style {*/
+/*  !* 原图尺寸为376X236  *!*/
+/*  !*width: 297px;*!*/
+/*  !*height: 186px;*!*/
+/*  !*border: none;*!*/
+/*  max-width: 800px;*/
+/*}*/
+
+.card-set {
+  height: 800px;
+}

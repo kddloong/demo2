@@ -1,0 +1,166 @@
+.popover  {
+  position: relative;
+  width: 336px;
+}
+
+.myPopover {
+  position: fixed !important;
+}
+
+.popover .ant-spin-nested-loading {
+
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, .08), 0 9px 28px 0 rgba(0, 0, 0, .05), 0 12px 48px 16px rgba(0, 0, 0, .03);
+}
+
+.noticeButton {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon {
+  padding: 4px;
+  vertical-align: middle;
+}
+
+.badge {
+  font-size: 16px;
+}
+
+.tabs .ant-tabs-nav-list {
+  margin: auto;
+}
+.tabs.ant-tabs .ant-tabs-nav {
+  margin: 0;
+}
+
+.tabs .ant-tabs-nav-scroll {
+  text-align: center;
+}
+
+.tabs .ant-tabs-bar {
+  margin-bottom: 0;
+
+}
+
+.list {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.list .item {
+  padding-right: 24px;
+  padding-left: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.list .item .meta {
+  width: 100%;
+}
+
+.list .item .avatar {
+  margin-top: 4px;
+  background: #fff;
+}
+
+.list .item .iconElement {
+  font-size: 32px;
+}
+
+.list .item.read {
+  opacity: 0.4;
+}
+
+.list .item:last-child {
+  border-bottom: 0;
+}
+
+.list .item:hover {
+  background: #e6f7ff;
+}
+
+.list .item .title {
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.list .item .description {
+  font-size: 12px;
+  line-height: 1.5715;
+}
+
+.list .item .datetime {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.5715;
+}
+
+.list .item .extra {
+  float: right;
+  margin-top: -1.5px;
+  margin-right: 0;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: normal;
+}
+
+.list .loadMore {
+  padding: 8px 0;
+  /*todo*/
+  color: #8d8c8c;
+  text-align: center;
+  cursor: pointer;
+}
+
+.list .loadMore.loadedAll {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: unset;
+}
+
+.notFound {
+  padding: 73px 0 88px;
+  /*todo*/
+  color: #8d8c8c;
+  text-align: center;
+}
+
+.notFound img {
+  display: inline-block;
+  height: 76px;
+  margin-bottom: 16px;
+}
+
+.bottomBar {
+  height: 46px;
+  color: rgba(0, 0, 0, .85);
+  line-height: 46px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, .06);
+  /*todo*/
+  border-radius: 0 0 2px 2px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.bottomBar div {
+  display: inline-block;
+  width: 49%;
+  cursor: pointer;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.bottomBar div:only-child {
+  width: 100%;
+}
+
+.bottomBar div:not(:only-child):last-child {
+  border-left: 1px solid rgba(0, 0, 0, .06);
+}

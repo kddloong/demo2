@@ -1,0 +1,70 @@
+.global_user-page-header {
+  padding-inline: 0;
+}
+
+.div_flex {
+  display: flex;
+}
+
+.div_flex-column {
+  flex-direction: column;
+}
+
+.div_justify-center {
+  justify-content: center;
+}
+
+.div_justify-start {
+  justify-content: flex-start;
+}
+
+.div_justify-end{
+  justify-content: flex-end;
+}
+
+
+.div_justify-between {
+  justify-content: space-between;
+}
+
+.div_align-center {
+  align-items: center;
+}
+
+.highlight {
+  font-weight: bold;
+  border-bottom: 2px dashed #000;
+  word-break: break-all;
+}
+
+.highlight_red {
+  border-color: red;
+}
+
+.w-100-percent {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.mr-1 {
+  margin-right: 4px;
+}
+
+.mw-1920 {
+  min-width: 1920px;
+}

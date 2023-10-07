@@ -1,0 +1,88 @@
+.chart-card {
+  position: relative;
+}
+
+.chart-card .chart-top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chart-card .chart-top-margin {
+  margin-bottom: 12px;
+}
+
+.chart-card .chart-top-has-margin {
+  margin-bottom: 20px;
+}
+
+.chart-card .meta-wrap {
+  float: left;
+}
+
+.chart-card .avatar {
+  position: relative;
+  top: 4px;
+  float: left;
+  margin-right: 20px;
+}
+
+.chart-card .avatar img {
+  border-radius: 100%;
+}
+
+.chart-card .meta {
+  height: 22px;
+  color: rgba(0, 0, 0, .45);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.chart-card .action {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.chart-card .total {
+  height: 38px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  overflow: hidden;
+  color: rgba(0, 0, 0, .83);
+  font-size: 30px;
+  line-height: 38px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.chart-card .content {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.chart-card .content-fixed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.chart-card .footer {
+  margin-top: 8px;
+  padding-top: 9px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.chart-card .footer > * {
+  position: relative;
+}
+
+.chart-card .footer-margin{
+  margin-top: 20px;
+}
+

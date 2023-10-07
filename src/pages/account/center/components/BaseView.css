@@ -1,0 +1,71 @@
+.area_code {
+  width: 72px;
+}
+
+.phone_number {
+  width: 214px;
+}
+
+
+.base-view {
+  display: flex;
+  padding-top: 12px;
+
+}
+
+.base-view .ant-legacy-form-item .ant-legacy-form-item-control-wrapper {
+  width: 100%;
+}
+
+.base-view .left {
+  min-width: 100%;
+  max-width: 1600px;
+}
+
+.base-view .right {
+  flex: 1;
+  padding-left: 104px;
+}
+
+.base-view .right .avatar_title {
+  height: 22px;
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, .85);
+  font-size: 14px;
+  line-height: 22;
+}
+
+.right .avatar {
+  width: 144px;
+  height: 14px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.right .avatar img {
+  width: 100%;
+}
+
+.right .button_view {
+  width: 144px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .base-view {
+    flex-direction: column-reverse;
+  }
+
+  .button_view .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 448px;
+    padding: 20px;
+  }
+
+  .button_view .right .avatar_title {
+    display: none;
+  }
+
+}

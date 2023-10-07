@@ -1,0 +1,110 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+body {
+  min-height: 100%;
+}
+
+body #root > div {
+  height: 100%;
+}
+
+//body #root > div section.ant-layout {
+//  height: 100% !important;
+//}
+//
+//section.ant-layout .ant-pro-layout-container {
+//  height: 100%;
+//}
+
+.ant-design-pro {
+  height: 100%;
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+//.self-layout section {
+//  height: 100%
+//}
+//
+//.self-layout section >div {
+//  height: 100%;
+//}
+
+@media (max-width: 768px) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 左侧菜单背景颜色
+.ant-layout-sider-children {
+  background-color: #fff;
+}
+
+// 顶部横条颜色
+//.ant-pro-top-nav-header-main {
+//  background-color: #262f3e;
+//  .ant-pro-menu-item {
+//  color: gold;
+//  }
+//}
+
+// 步骤条组件不显示下划线、限制描述宽度
+.stepClass .ant-steps-item::before {
+  display: none !important;
+}
+
+.stepClass .ant-steps-item-container {
+  padding-bottom: 0;
+}
+
+.stepClass .ant-steps-item-description {
+  min-width: 260px;
+}

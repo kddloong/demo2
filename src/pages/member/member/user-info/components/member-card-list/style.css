@@ -1,0 +1,7 @@
+.card-box {
+  display: flex;
+}
+
+.card-box:nth-child(n + 2) {
+  margin-left: 10px;
+}

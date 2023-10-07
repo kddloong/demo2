@@ -1,0 +1,44 @@
+.register-radio .ant-radio-wrapper {
+  padding-left: 30px;
+  margin-right: 36px;
+  position: relative;
+}
+
+.register-radio .ant-radio-wrapper .ant-radio {
+  position: absolute;
+  top: 38px;
+  left: 0;
+}
+
+.register-radio .ant-radio-wrapper .ant-radio + * {
+  padding-right: 0;
+}
+
+.register-radio .radio-item {
+  display: flex;
+  width: 260px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f4f5f9;
+  height: 120px;
+}
+
+.register-radio .register-radio .left-img{
+  width: 80px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+}
+
+.register-radio .register-radio .right-content p{
+  margin-bottom: 0;
+  color: #555;
+  font-size: 16px;
+}
+
+.right-content p:first-child{
+  margin-bottom: 8px;
+  color: #000;
+  font-weight: 600;
+}

@@ -1,0 +1,81 @@
+.ml-auto {
+  margin-left: auto !important;
+}
+
+button {
+  overflow: visible;
+
+}
+
+button {
+  -webkit-appearance: button
+}
+
+
+.ui.button {
+  -webkit-tap-highlight-color: transparent;
+  background: #fff none;
+  border: none;
+  border-radius: .28571429rem;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto, PingFang SC, Noto Sans SC, Microsoft YaHei UI, Microsoft YaHei, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.28571429em;
+  margin: 0 .25em 0 0;
+  min-height: 1em;
+  outline: none;
+  padding: .5em 1.14285714em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  vertical-align: baseline;
+}
+
+.ui.basic.blue.button:hover {
+  background-color: #f5f6f8 !important;
+  box-shadow: inset 0 0 0 1px #dadee3 !important;
+  color: #5f6d84 !important;
+}
+
+.ui.basic.button.disabled {
+  color: rgba(40, 40, 40, .3) !important;
+}
+
+.ui.basic.blue.button {
+  box-shadow: inset 0 0 0 1px #dadee3 !important;
+}
+
+.ui.button:last-child {
+  margin-right: 0;
+}
+
+.ui.button:disabled, .ui.buttons .disabled.button, .ui.disabled.active.button, .ui.disabled.button, .ui.disabled.button:focus, .ui.disabled.button:focus:hover, .ui.disabled.button:hover {
+  background-color: #fff !important;
+  box-shadow: inset 0 0 0 1px #dadee3 !important;
+  color: rgba(40, 40, 40, .3);
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  pointer-events: none !important;
+}
+
+.ui.basic.button, .ui.basic.buttons .button {
+	background: transparent none !important;
+	border-radius: .28571429rem;
+	box-shadow: inset 0 0 0 1px #dadee3;
+	color: #5f6d84 !important;
+	font-weight: 400;
+	text-shadow: none !important;
+	text-transform: none;
+}
+
+.ui.small.button, .ui.small.buttons .button, .ui.small.buttons .or {
+	font-size: .8125rem;
+}

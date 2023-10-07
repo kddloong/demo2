@@ -1,0 +1,32 @@
+.card {
+  float: left;
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.card .name-box {
+  position: relative;
+}
+
+.card .name-box .show {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.card .value {
+  align-self: end;
+  text-align: right;
+  width: 100%;
+}

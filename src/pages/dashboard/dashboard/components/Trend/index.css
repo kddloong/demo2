@@ -1,0 +1,40 @@
+.trendItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.up {
+  color: #f5222d;
+}
+
+.down {
+  color: #52c41a;
+  top: -1px;
+}
+
+.trendItem .up,
+.trendItem .down {
+  position: relative;
+  top: 1px;
+  margin-left: 4px;
+}
+
+.up span,
+.down span {
+  font-size: 12px;
+  transform: scale(0.83);
+}
+
+.trendItem.trendItemGrey .up,
+.trendItem.trendItemGrey .down {
+  color: #000;
+}
+
+.trendItem.reverseColor .up {
+  color: #52c41a;
+}
+
+.trendItem.reverseColor .down {
+  color: #f5222d;
+}
