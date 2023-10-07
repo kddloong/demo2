@@ -15,7 +15,7 @@ export const columns: ProColumns<VenueCheck.VenueCheckItem>[] = [
     width: '8%',
   },
   {
-    title: '核销场地',
+    title: '核销预定',
     dataIndex: 'xxxx',
     key: 'xxxx',
     hideInSearch: true,

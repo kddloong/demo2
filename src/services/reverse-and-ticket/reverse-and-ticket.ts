@@ -1,12 +1,12 @@
 import { TypeUtil } from 'types/utils';
 import { get, post } from '@/services/request/request_tools';
 import { CLIENT_VERSION as version } from '@/utils/utils';
-import { ReverseDetailOrder } from 'types/area/schedule';
+import { ReverseDetailOrder } from '../../../types/rever/schedule';
 import { UseOrder } from 'types/reverse-and-ticket/UseOrder';
 import { TicketDetailOrder } from 'types/ticket/order';
 
 /**
- * 获取售票订单和预定订单
+ * 获取售卖订单和预定订单
  * @param params
  */
 export async function fetchUseOrderList(
@@ -16,7 +16,7 @@ export async function fetchUseOrderList(
 }
 
 /**
- * 获取售票订单或预定订单的子订单列表
+ * 获取售卖订单或预定订单的子订单列表
  * @param id
  */
 export async function fetchUseOrderDetailList(
@@ -26,7 +26,7 @@ export async function fetchUseOrderDetailList(
 }
 
 /**
- * 取消预定订单或售票订单
+ * 取消预定订单或售卖订单
  * @param id
  * @param cancelReason
  * @param cancelReasonId
@@ -65,7 +65,7 @@ export async function backUseOrder(
 }
 
 /**
- * 获取售票订单或预定订单的详情, 包含主订单和子订单
+ * 获取售卖订单或预定订单的详情, 包含主订单和子订单
  * @date 2023-09-22
  * @param id
  */

@@ -196,7 +196,7 @@ export { NormalResponseField, SaasResponseField, BaseResponseField };
 export { BaseVisibleParams };
 
 /**
- * reverse-pay-check 是售票的功能
+ * reverse-pay-check 是售卖的功能
  */
 export type SettleOrderType =
   | 'reverse'

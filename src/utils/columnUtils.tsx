@@ -1,10 +1,5 @@
-import {genderRenderFromObj} from '@/utils/render';
 import type {ProColumns, ProDescriptionsItemProps} from '@ant-design/pro-components';
-import {handleDictionary} from '@/utils/main/main/dictionary';
 import {handleGetVenueSelectData} from '@/utils/account/base-info';
-import {payStatusObj} from '@/utils/pay/pay';
-import {CardReader} from '../../types/device/encrypted-card/card-setting';
-import {CardNoSearchBox} from '@/components/member/CardNoSearchBox';
 
 /**
  * 复用表格中的列
@@ -41,15 +36,7 @@ export const priceFormDigit = {
   width: '6%',
 };
 
-export const depositFormDigit = {
-  title: '押金费用',
-  dataIndex: 'deposit',
-  key: 'deposit',
-  hideInSearch: true,
-  hideInTable: true,
-  hideInDescriptions: true,
-  width: '10%',
-};
+
 
 export const orderNoFormText = {
   title: '订单号',
@@ -60,21 +47,7 @@ export const orderNoFormText = {
   width: '9%',
 };
 
-export const payStatusFormSelect = {
-  title: '支付状态',
-  dataIndex: 'payStatus',
-  key: 'payStatus',
-  hideInSearch: true,
-  hideInTable: false,
-  width: '7%',
-  valueType: 'select',
-  request: async () => {
-    return await handleDictionary('changguan_pay_status');
-  },
-  render: (_: unknown, record: { payStatus: string }) => {
-    return genderRenderFromObj(payStatusObj, record.payStatus);
-  },
-};
+
 
 export const totalPriceFormDigit = {
   title: '订单总价',
@@ -107,17 +80,6 @@ export const actPriceFormDigit = {
 
 
 
-export const phoneNoText = (text = '手机号', name = 'phoneNo') => {
-  return {
-    title: text,
-    dataIndex: name,
-    key: 'phoneNo',
-    hideInSearch: true,
-    hideInTable: false,
-    width: '8%',
-  };
-};
-
 export const baseMemberPhoneNoColumns: ProColumns = {
   title: '手机号',
   dataIndex: 'phoneNo',
@@ -148,53 +110,3 @@ export const baseMemberSearchColumns: ProColumns[] = [
   },
 ];
 
-
-export const setMemberCardNoColumn = (card: CardReader.CardReaderSetting, width: number = 10) => {
-  return {
-    title: '用户编号',
-    dataIndex: 'code',
-    key: 'code',
-    hideInSearch: false,
-    hideInTable: false,
-    width: `${width}%`,
-    // width: width,
-    renderFormItem: () => {
-      return <CardNoSearchBox card={card as CardReader.CardReaderSetting} />;
-    },
-  };
-};
-
-export const endColumns = [
-  {
-    title: '创建时间',
-    dataIndex: 'createDate',
-    key: 'createDate',
-    hideInSearch: true,
-    hideInTable: false,
-    width: 120,
-  },
-  {
-    title: '创建人',
-    dataIndex: 'createName',
-    key: 'createName',
-    hideInSearch: true,
-    hideInTable: false,
-    width: 120,
-  },
-  {
-    title: '最后更新时间',
-    dataIndex: 'updateDate',
-    key: 'updateDate',
-    hideInSearch: true,
-    hideInTable: false,
-    width: 120,
-  },
-  {
-    title: '最后操作人',
-    dataIndex: 'updateName',
-    key: 'updateName',
-    hideInSearch: true,
-    hideInTable: false,
-    width: 120,
-  },
-];

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CLIENT_ID, sendLog } from '@/utils/utils';
+import { CLIENT_ID, } from '@/utils/utils';
 import { history } from '@umijs/max';
 import { message } from 'antd';
 import { handleRequest, refreshToken } from '@/services/request/tools';
@@ -73,26 +73,13 @@ service.interceptors.response.use(
     // 对响应数据做点什么
     if (response.data.code === 401) {
       window.localStorage.clear();
-      sendLog('response onFulfilled 401 fail! redirect to /user/login');
-
       localStorage.removeItem('accessToken');
       history.push('/user/login');
     }
 
     if (!response.data.success) {
-      sendLog(`error requests url: ${response.config.url}`);
 
-      sendLog(`error requests params: ${JSON.stringify(response.config?.params)}`);
 
-      const responseMsg = response.data.msg;
-
-      const reg = /[\r\n]+/g;
-
-      if (reg.test(responseMsg)) {
-        sendLog(`查询语句出错`);
-      } else {
-        sendLog(`error requests msg: ${responseMsg}`);
-      }
     }
 
     return response.data;
@@ -101,37 +88,12 @@ service.interceptors.response.use(
     console.log(`err`, error);
     // 超出 2xx 范围的状态码都会触发该函数。
     const response = error.response;
-
-    sendLog(`error requests url: ${response.config.url}`);
-
-    sendLog(`error requests params: ${JSON.stringify(response.config?.params)}`);
-
-    const responseMsg = response.data.msg;
-
-    if (responseMsg.indexOf('\n') >= 0) {
-      const newMsg = response.data.msg.substring(5);
-
-      sendLog(newMsg + '');
-
-      const msgLen = responseMsg / 100 + 1;
-
-      sendLog(msgLen + '');
-
-      Array.from({ length: msgLen }).forEach((item, index) => {
-        sendLog(`error requests msg: ${newMsg.slice(index * 100, (index + 1) * 100)}`);
-      });
-    } else {
-      sendLog(`error requests msg: ${response.data.msg}`);
-    }
-
     if (!response) {
       message.error(error.message);
     }
 
     if (response?.data?.code === 401) {
       window.localStorage.clear();
-
-      sendLog('http response 401 fail! redirect to /user/login');
 
       localStorage.removeItem('accessToken');
       history.push('/user/login');
@@ -152,7 +114,6 @@ service2.interceptors.response.use(
   (response) => {
     if (response.data.code === 401) {
       window.localStorage.clear();
-      sendLog('service2  response 401 fail! redirect to /user/login');
 
       localStorage.removeItem('accessToken');
       history.push('/user/login');
@@ -171,7 +132,6 @@ service2.interceptors.response.use(
 
     if (response?.data?.code === 401) {
       window.localStorage.clear();
-      sendLog('response 401 fail! redirect to /user/login');
 
       localStorage.removeItem('accessToken');
       history.push('/user/login');

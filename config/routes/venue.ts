@@ -1,7 +1,7 @@
 const ticketRoutes = [
   {
     path: '/menu33',
-    name: '售票',
+    name: '售卖',
     icon: 'jixianguanli',
     routes: [
       {

@@ -11,7 +11,7 @@ import {
 import { BaseBaseSetting } from 'types/account/base-info';
 
 /**
- * 处理获取当前场地的信息
+ * 处理获取当前预定的信息
  * @date 2022-01-04 13:48:46
  * @param id
  * @returns {Promise<{}|*>}
@@ -63,7 +63,7 @@ export const handleSaveVenueData = async (
 };
 
 /**
- * 处理删除场地信息
+ * 处理删除预定信息
  * @date 2022-01-04 14:17:41
  * @param id
  * @returns {Promise<boolean>}
@@ -91,8 +91,8 @@ export const handleDeleteVenueData = async (id: string) => {
 };
 
 /**
- * 处理获取的场地树列表
- * @param {string} type type === '0' 查询 的结果不返回 场地 , 为空 查询的结果场地场地
+ * 处理获取的预定树列表
+ * @param {string} type type === '0' 查询 的结果不返回 预定 , 为空 查询的结果预定预定
  * @returns {Promise<*[]|*>}
  */
 export const handleVenueTree = async (type = '') => {
@@ -111,8 +111,8 @@ export const handleVenueTree = async (type = '') => {
 };
 
 /**
- * 处理获取的场地树列表
- * @param {string} type type === '0' 查询 的结果不返回 场地 , 为空 查询的结果场地场地
+ * 处理获取的预定树列表
+ * @param {string} type type === '0' 查询 的结果不返回 预定 , 为空 查询的结果预定预定
  * @returns {Promise<*[]|*>}
  */
 export const handleVenueTreeAnon = async (type = '') => {
@@ -131,7 +131,7 @@ export const handleVenueTreeAnon = async (type = '') => {
 };
 
 /**
- * 处理获取的场地信息， 用于Select
+ * 处理获取的预定信息， 用于Select
  * @date 2022-01-12 13:35:47
  * @returns {Promise<*[]|*>}
  */
@@ -151,7 +151,7 @@ export const handleGetVenueSelectData = async () => {
 };
 
 /**
- * 处理根据场馆id获取的它之下场地的数据， 用于Select
+ * 处理根据场馆id获取的它之下预定的数据， 用于Select
  * @date 2022-01-20 13:06:31
  * @param id
  * @returns {Promise<*[]|*>}

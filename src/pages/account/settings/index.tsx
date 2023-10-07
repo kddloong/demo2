@@ -3,7 +3,6 @@ import { Menu } from 'antd';
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import '@/styles/account/style.css';
 import { useSearchParams } from '@umijs/max';
-import ChangePassWord from '@/pages/account/settings/change-password';
 import MyMessageSetting from '@/pages/account/settings/message-setting';
 import BindingView from '@/pages/account/settings/account-binding';
 import { useNavigate } from '@@/exports';
@@ -69,8 +68,7 @@ const Settings: React.FC = () => {
   const renderChildren = () => {
     const { selectKey } = initConfig;
     switch (selectKey) {
-      case 'security':
-        return <ChangePassWord />;
+
       case 'notification':
         return <MyMessageSetting />;
       case 'binding':

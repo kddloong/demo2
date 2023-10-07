@@ -1,7 +1,7 @@
 const areaRoutes = [
   {
     path: '/area',
-    name: '场地',
+    name: '预定',
     icon: 'IPshijiantongji',
     routes: [
       {

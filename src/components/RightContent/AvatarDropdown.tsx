@@ -84,12 +84,7 @@ export const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu, childre
             label: '个人设置',
             meta: { isRoute: true },
           },
-          {
-            key: 'base-info',
-            icon: <IdcardOutlined />,
-            label: '场馆详情',
-            meta: { isRoute: true },
-          },
+
           {
             key: 'real-name-auth',
             icon: <IdcardOutlined />,

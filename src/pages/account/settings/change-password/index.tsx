@@ -1,38 +1,17 @@
 import React from 'react';
-import { handleUpdatePassword } from '@/utils/main/main/user';
-import md5 from 'js-md5';
 import { ProForm, ProFormDependency, ProFormText } from '@ant-design/pro-components';
 import { basicRule, password_RegExp } from '@/utils/utils';
 import { Form } from 'antd';
-import { useModel } from '@@/exports';
 
 const ChangePassWord: React.FC = () => {
   const [form] = Form.useForm();
-  const { initialState } = useModel('@@initialState');
 
   return (
     <>
       <ProForm
         title="修改密码"
         form={form}
-        onFinish={async (values) => {
-          const userId = initialState?.currentUser?.id;
-
-          if (!userId) {
-            return;
-          }
-
-          const result = await handleUpdatePassword({
-            userId,
-            oldPassword: md5(values.oldPassword),
-            password: md5(values.password),
-            repassword: md5(values.repassword),
-          });
-
-          if (result) {
-            form.resetFields();
-          }
-        }}
+        onFinish={async (values) => {}}
         initialValues={{
           oldPassword: '',
           password: '',

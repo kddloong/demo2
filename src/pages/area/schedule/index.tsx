@@ -1,4 +1,3 @@
-import { BackAreaScheduleOrder } from '@/pages/area/schedule/components/ShowCancelReverseDetail';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
 import { ProTable } from '@ant-design/pro-components';
 import { Space } from 'antd';
@@ -15,18 +14,9 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 const ScheduleOrderList = () => {
   const actionRef = useRef<ActionType>();
 
-  const [cancelVisible, setCancelVisible] = useState(false);
-
   const [record, setRecord] = useState<BookOrder.BookOrderItem | Record<string, any>>({});
 
   const { styles } = utilsStyles();
-
-  const refreshTable = () => {
-    actionRef.current?.reload();
-    actionRef.current?.clearSelected?.();
-
-    setRecord({});
-  };
 
   const columns: ProColumns<UseOrder.UseOrderItem>[] = [
     ...reverseAndTicketColumns('page'),
@@ -80,16 +70,6 @@ const ScheduleOrderList = () => {
           }}
           columns={columns}
         />
-
-        {cancelVisible && (
-          <BackAreaScheduleOrder
-            visible={cancelVisible}
-            setVisible={setCancelVisible}
-            currentNo={record.orderNo}
-            refreshTable={refreshTable}
-            title={'预定'}
-          />
-        )}
       </WrapContainer>
     </ErrorBoundary>
   );

@@ -1,16 +1,16 @@
-import type { ProColumns } from '@ant-design/pro-components';
-import { ProTable } from '@ant-design/pro-components';
-import { useRef } from 'react';
-import { columns as areaVenueCheckListColumns } from './columns';
-import { useAccess } from '@umijs/max';
-import { venueIdFormSelect } from '@/utils/columnUtils';
-import { fromSetting } from '@/utils/enums';
-import { handleAreaCheckList } from '@/utils/ticket/check';
-import { VenueCheck } from '../../../../types/ticket/check';
-import { WrapContainer } from '@/components/layout/WrapContainer';
+import type {ProColumns} from '@ant-design/pro-components';
+import {ProTable} from '@ant-design/pro-components';
+import {useRef} from 'react';
+import {columns as areaVenueCheckListColumns} from './columns';
+import {useAccess} from '@umijs/max';
+import {venueIdFormSelect} from '@/utils/columnUtils';
+import {fromSetting} from '@/utils/enums';
+import {handleAreaCheckList} from '@/utils/ticket/check';
+import {VenueCheck} from '../../../../types/ticket/check';
+import {WrapContainer} from '@/components/layout/WrapContainer';
 
 /**
- * 查看场地的订单的核销明细
+ * 查看预定的订单的核销明细
  * @date 2022-01-21 16:16:38
  * @returns {JSX.Element}
  * @constructor
@@ -21,7 +21,7 @@ const VenueCheckList = () => {
   const access = useAccess();
 
   const columns = [
-    { ...(venueIdFormSelect as ProColumns), width: '8%', title: '场地项目名称' },
+    { ...(venueIdFormSelect as ProColumns), width: '8%', title: '预定项目名称' },
     ...areaVenueCheckListColumns,
   ];
 

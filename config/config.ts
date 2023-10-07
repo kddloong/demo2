@@ -4,7 +4,6 @@ import { join } from 'path';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
 import routes from './routes';
-import { theme } from 'antd';
 
 const { REACT_APP_ENV = 'dev' } = process.env;
 
@@ -15,7 +14,7 @@ export default defineConfig({
    * @doc https://umijs.org/docs/api/config#hash
    */
   hash: true,
-
+  jsMinifier: 'terser',
   /**
    * @name 兼容性设置
    * @description 设置 ie11 不一定完美兼容，需要检查自己使用的所有依赖
@@ -77,7 +76,7 @@ export default defineConfig({
    * @name layout 插件
    * @doc https://umijs.org/docs/max/layout-menu
    */
-  title: '场馆系统',
+  title: 'DEMO',
   layout: {
     locale: false,
     ...defaultSettings,

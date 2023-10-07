@@ -16,7 +16,7 @@ const columns = (
   type: 'reverse' | 'ticket' = 'reverse',
 ): ProColumns<UseOrder.UseOrderItem>[] => {
   return [
-    { ...(venueIdFormSelect as ProColumns), title: '场地项目名称', width: 100 },
+    { ...(venueIdFormSelect as ProColumns), title: '预定项目名称', width: 100 },
     { ...orderNoFormText, hideInSearch: false, width: 156 },
     {
       ...orderStatusFormSelect(type),

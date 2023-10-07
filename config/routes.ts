@@ -59,13 +59,7 @@ export default [
         path: '/account/settings',
         component: './account/settings',
       },
-      {
-        name: '场馆详情',
-        icon: 'smile',
-        hideInMenu: true,
-        path: '/account/base-info',
-        component: './account/base-info',
-      },
+
     ],
   },
   {

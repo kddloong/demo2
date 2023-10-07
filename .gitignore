@@ -9,8 +9,6 @@ _roadhog-api-doc
 # production
 /dist
 
-config/config.mydev.ts
-
 # misc
 .DS_Store
 npm-debug.log*

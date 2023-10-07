@@ -16,7 +16,7 @@ const Settings: ProLayoutProps & {
   // logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
   splitMenus: true,
   siderMenuType: 'group',
-  title: '场馆系统',
+  title: 'DEMO',
   token: {
     pageContainer: {
       paddingInlinePageContainerContent: '20px',
